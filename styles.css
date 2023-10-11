@@ -1,0 +1,139 @@
+* {
+  font-family: "Libre Baskerville", serif;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a2e;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a2e;
+  margin: 0;
+  padding: 0;
+}
+.header__title {
+  font-size: 24px;
+  margin-right: 10px;
+  color: white;
+}
+
+.pricing-table {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10px;
+}
+
+.subscription-options {
+  display: flex;
+  align-items: center;
+}
+.subscription-options__month, .subscription-options__year {
+  margin-bottom: 0;
+  padding-inline: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  background: none;
+  border: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.subscription-options__month:hover, .subscription-options__year:hover {
+  color: #ffa43d;
+}
+
+.plan {
+  margin-top: 20px;
+  background-color: #1a1a2e;
+  border: 2px solid #ffa43d;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+.plan .price {
+  text-align: left;
+  background-color: #26264a;
+  border-radius: 6px;
+  padding: 24px;
+  transition: background-color 0.3s;
+}
+.plan .price__name {
+  font-size: 24px;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.plan .price__yarly, .plan .price__monthly {
+  font-size: 16px;
+  color: #ffa43d;
+}
+.plan .features {
+  padding-left: 16px;
+  margin-top: 20px;
+}
+.plan .features li {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+.plan .features__checkmark, .plan .features__cross {
+  color: #ffa43d;
+  font-size: 20px;
+  margin-right: 12px;
+}
+.plan .features__name {
+  font-size: 16px;
+  color: white;
+}
+.plan .sign-up {
+  margin-bottom: 20px;
+  margin-top: 4px;
+  background-color: #6cb928;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.4s;
+}
+.plan .sign-up:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 641px) {
+  .pricing-table {
+    display: flex;
+    flex-direction: row;
+  }
+  .plan {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 901px) {
+  .pricing-table {
+    display: flex;
+    flex-direction: row;
+  }
+  .plan {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .pricing-table {
+    display: flex;
+    flex-direction: row;
+  }
+  .plan {
+    width: 350px;
+    margin-left: 20px;
+  }
+}/*# sourceMappingURL=styles.css.map */

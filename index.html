@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <title>Pricing Comparison Table</title>
+</head>
+<body class="body">
+  <header class="header">
+    <h1 class="header__title">Upgrade your subscription</h1>
+  </header>
+
+  <div class="subscription-options">
+    <button 
+      type="button" 
+      class="subscription-options__month"
+      onclick="changePrice('monthly')"
+    >
+      Monthly
+    </button>
+    <button 
+      type="button" 
+      class="subscription-options__year"
+      onclick="changePrice('yearly')"
+    >
+      Yearly
+    </button>
+  </div>
+
+  <div class="pricing-table">
+    <div class="plan">
+      <div class="price">
+        <h2 class="price__name">Basic</h2>
+        <span id="price-monthly-1" class="price__monthly"> $0 / month</span>
+        <span id="price-yearly-1" style="display: none" class="price__yarly"> $0 / year</span>
+      </div>
+
+      <ul class="features">
+        <li>
+            <span class="features__checkmark">✔</span>
+            <span class="features__name">Create your own map</span>
+        </li>
+        <li>
+            <span class="features__checkmark">✔</span>
+            <span class="features__name">Host private parties</span>
+        </li>
+        <li>
+            <span class="features__cross">✘</span>
+            <span class="features__name">No ads</span>
+        </li>
+        <li>
+          <span class="features__cross">✘</span>
+          <span class="features__name">Free monthly coins</span>
+        </li>
+        <li>
+          <span class="features__cross">✘</span>
+          <span class="features__name">Unlimited play</span>
+        </li>
+      </ul>
+          
+        <button class="sign-up">Sign Up</button>
+    </div>
+
+      <div class="plan">
+        <div class="price">
+            <h2 class="price__name">Pro</h2>
+            <span id="price-monthly-2" class="price__monthly"> $6.99 / month</span>
+            <span id="price-yearly-2" style="display: none" class="price__yarly"> $59.99 / year</span>
+        </div>
+
+        <ul class="features">
+          <li>
+              <span class="features__checkmark">✔</span>
+              <span class="features__name">Create your own map</span>
+          </li>
+          <li>
+              <span class="features__checkmark">✔</span>
+              <span class="features__name">Host private parties</span>
+          </li>
+          <li>
+              <span class="features__cross">✔</span>
+              <span class="features__name">No ads</span>
+          </li>
+          <li>
+            <span class="features__cross">✘</span>
+            <span class="features__name">Free monthly coins</span>
+          </li>
+          <li>
+            <span class="features__cross">✘</span>
+            <span class="features__name">Unlimited play</span>
+          </li>
+        </ul>
+      
+        <button class="sign-up">Sign Up</button>
+      </div>
+  
+      <div class="plan">
+        <div class="price">
+          <h2 class="price__name">Premium</h2>
+          <span id="price-monthly-3" class="price__monthly"> $9.99 / month</span>
+          <span id="price-yearly-3" style="display: none" class="price__yarly"> $89.99 / year</span>
+        </div>
+
+        <ul class="features">
+          <li>
+              <span class="features__checkmark">✔</span>
+              <span class="features__name">Create your own map</span>
+          </li>
+          <li>
+              <span class="features__checkmark">✔</span>
+              <span class="features__name">Host private parties</span>
+          </li>
+          <li>
+              <span class="features__cross">✔</span>
+              <span class="features__name">No ads</span>
+          </li>
+          <li>
+            <span class="features__cross">✔</span>
+            <span class="features__name">Free monthly coins</span>
+          </li>
+          <li>
+            <span class="features__cross">✔</span>
+            <span class="features__name">Unlimited play</span>
+          </li>
+        </ul>
+        
+        <button type="button" class="sign-up">Sign Up</button>
+      </div>
+
+    <script>
+      function changePrice(subscriptionType) {
+        const monthlyPriceElements = document.querySelectorAll("[id^='price-monthly-']");
+        const yearlyPriceElements = document.querySelectorAll("[id^='price-yearly-']");
+        
+        if (subscriptionType === 'monthly') {
+          monthlyPriceElements.forEach(function (element) {
+            element.style.display = 'block';
+          });
+          yearlyPriceElements.forEach(function (element) {
+            element.style.display = 'none';
+          });
+        } else {
+          monthlyPriceElements.forEach(function (element) {
+            element.style.display = 'none';
+          });
+          yearlyPriceElements.forEach(function (element) {
+            element.style.display = 'block';
+          });
+        }
+      }
+    </script>
+</body>
+</html>
